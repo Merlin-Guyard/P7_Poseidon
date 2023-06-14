@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Home</title>
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+
+		<div class="col-6 text-left">
+			<a th:if="'[ADMIN]' == ${role}" href="/user/list">User &nbsp;| </a> <a href="/bidList/list">BidList</a>&nbsp;|
+			<a href="/curvePoint/list">CurvePoint</a>&nbsp;| <a href="/rating/list">Rating</a>&nbsp;| <a
+				href="/ruleName/list">RuleName</a>&nbsp;| <a href="/trade/list">Trade</a>&nbsp;| <a
+				href="/home">Home</a>
+		</div>
+		<div class="col-6 text-right">
+			<label class="labels"><span th:text="'Current user : ' + ${name}"></span></label> <a href="#" th:href="@{/logout}">Log Out</a>
+		</div>
+	</div>
+	<div class="row"><h2>User List</h2></div>
+	<a href="/user/add" class="btn btn-primary btn-sm">Add New</a>
+	<div class="row">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Full Name</th>
+					<th>User Name</th>
+					<th>Role</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="user : ${users}">
+					<td style="width: 10%" th:text="${user.id}"></td>
+					<td th:text="${user.fullname}"></td>
+					<td th:text="${user.username}"></td>
+					<td style="width: 25%" th:text="${user.role}"></td>
+					<td style="width: 15%" class="text-center">
+						<a th:href="@{/user/update/{id}(id=${user.id})}">Edit</a>&nbsp;|&nbsp;
+						<a th:href="@{/user/delete/{id}(id=${user.id})}">Delete</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</body>
+</html>

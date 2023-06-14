@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Home</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+
+        <div class="col-6 text-left">
+            <a th:if="'[ADMIN]' == ${role}" href="/user/list">User &nbsp;| </a> <a href="/bidList/list">BidList</a>&nbsp;|
+            <a href="/curvePoint/list">CurvePoint</a>&nbsp;| <a href="/rating/list">Rating</a>&nbsp;| <a
+                href="/ruleName/list">RuleName</a>&nbsp;| <a href="/trade/list">Trade</a>&nbsp;| <a
+                href="/home">Home</a>
+        </div>
+        <div class="col-6 text-right">
+            <label class="labels"><span th:text="'Current user : ' + ${name}"></span></label> <a href="#" th:href="@{/logout}">Log Out</a>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row">
+
+            <div class="col align-self-center">
+                Welcome on Poseidon's trading application !
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

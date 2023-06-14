@@ -1,0 +1,12 @@
+com\nnk\springboot\TI\UserTests.class
+com\nnk\springboot\TU\CurvePointTests.class
+com\nnk\springboot\TI\RatingTests.class
+com\nnk\springboot\TI\BidTests.class
+com\nnk\springboot\RatingTests.class
+com\nnk\springboot\TI\TradeTests.class
+com\nnk\springboot\TI\CurvePointTests.class
+com\nnk\springboot\TradeTests.class
+com\nnk\springboot\TI\RuleTests.class
+com\nnk\springboot\TU\BidTests.class
+com\nnk\springboot\RuleTests.class
+com\nnk\springboot\TU\PasswordEncodeTest.class

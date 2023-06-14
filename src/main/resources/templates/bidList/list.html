@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+
+        <div class="col-6 text-left">
+            <a th:if="'[ADMIN]' == ${role}" href="/user/list">User &nbsp;| </a> <a href="/bidList/list">BidList</a>&nbsp;|
+            <a href="/curvePoint/list">CurvePoint</a>&nbsp;| <a href="/rating/list">Rating</a>&nbsp;| <a
+                href="/ruleName/list">RuleName</a>&nbsp;| <a href="/trade/list">Trade</a>&nbsp;| <a
+                href="/home">Home</a>
+        </div>
+        <div class="col-6 text-right">
+            <label class="labels"><span th:text="'Current user : ' + ${name}"></span></label> <a href="#" th:href="@{/logout}">Log Out</a>
+        </div>
+    </div>
+    <div class="row"><h2>Bidlist List</h2></div>
+    <a href="/bidList/add" class="btn btn-primary btn-sm">Add New</a>
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Account</th>
+                <th>Type</th>
+                <th>BidQuantity</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="bidlist : ${bidLists}">
+                <td style="width: 10%" th:text="${bidlist.bidListId}"></td>
+                <td th:text="${bidlist.account}"></td>
+                <td th:text="${bidlist.type}"></td>
+                <td th:text="${bidlist.bidQuantity}"></td>
+                <td style="width: 15%" class="text-center">
+                    <a th:href="@{/bidList/update/{id}(id=${bidlist.bidListId})}">Edit</a>&nbsp;|&nbsp;
+                    <a th:href="@{/bidList/delete/{id}(id=${bidlist.bidListId})}">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
+
+
+<!--<tr th:each="bidlist : ${bidLists}">-->
+<!--    <td th:text="${bidlist.bidListId}"></td>-->
+<!--    <td th:text="${bidlist.account}"></td>-->
+<!--    <td th:text="${bidlist.type}"></td>-->
+<!--    <td th:text="${bidlist.bidQuantity}"></td>-->
+<!--    <td>-->
+<!--        <a class="btn btn-danger ml-2"-->
+<!--           th:href="@{/bidList/delete/{id}(id=${bidlist.bidListId})}">Delete</a>|-->
+<!--        <a class="btn btn-primary ml-2"-->
+<!--           th:href="@{/bidList/update/{id}(id=${bidlist.bidListId})}">Edit</a>-->
+<!--    </td>-->

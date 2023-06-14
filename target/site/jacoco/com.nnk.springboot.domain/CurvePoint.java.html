@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CurvePoint.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">spring-boot-skeleton</a> &gt; <a href="index.source.html" class="el_package">com.nnk.springboot.domain</a> &gt; <span class="el_source">CurvePoint.java</span></div><h1>CurvePoint.java</h1><pre class="source lang-java linenums">package com.nnk.springboot.domain;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Positive;
+
+import java.sql.Timestamp;
+
+@Entity
+@Table(name = &quot;curvepoint&quot;)
+public class CurvePoint {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name=&quot;id&quot;)
+    int id;
+
+    @Positive(message = &quot;Enter a positive number above 0&quot;)
+    @Column(name=&quot;curveId&quot;)
+    int curveId;
+
+    @Column(name=&quot;asOfDate&quot;)
+    Timestamp asOfDate;
+
+    @Positive(message = &quot;Enter a positive number above 0&quot;)
+    @Column(name=&quot;term&quot;)
+    double term;
+
+    @Positive(message = &quot;Enter a positive number above 0&quot;)
+    @Column(name=&quot;valueCP&quot;)
+    double valueCP;
+
+    @Column(name=&quot;creationDate&quot;)
+    Timestamp creationDate;
+
+<span class="fc" id="L35">    public CurvePoint() {</span>
+<span class="fc" id="L36">    }</span>
+
+<span class="fc" id="L38">    public CurvePoint(int curveId, double term, double valueCP) {</span>
+<span class="fc" id="L39">        this.curveId = curveId;</span>
+<span class="fc" id="L40">        this.term = term;</span>
+<span class="fc" id="L41">        this.valueCP = valueCP;</span>
+<span class="fc" id="L42">    }</span>
+
+    public int getId() {
+<span class="fc" id="L45">        return id;</span>
+    }
+
+    public void setId(int id) {
+<span class="fc" id="L49">        this.id = id;</span>
+<span class="fc" id="L50">    }</span>
+
+    public int getCurveId() {
+<span class="fc" id="L53">        return curveId;</span>
+    }
+
+    public void setCurveId(int curveId) {
+<span class="fc" id="L57">        this.curveId = curveId;</span>
+<span class="fc" id="L58">    }</span>
+
+    public Timestamp getAsOfDate() {
+<span class="nc" id="L61">        return asOfDate;</span>
+    }
+
+    public void setAsOfDate(Timestamp asOfDate) {
+<span class="nc" id="L65">        this.asOfDate = asOfDate;</span>
+<span class="nc" id="L66">    }</span>
+
+    public double getTerm() {
+<span class="fc" id="L69">        return term;</span>
+    }
+
+    public void setTerm(double term) {
+<span class="fc" id="L73">        this.term = term;</span>
+<span class="fc" id="L74">    }</span>
+
+    public double getValueCP() {
+<span class="fc" id="L77">        return valueCP;</span>
+    }
+
+    public void setValueCP(double curvePointValue) {
+<span class="fc" id="L81">        this.valueCP = curvePointValue;</span>
+<span class="fc" id="L82">    }</span>
+
+    public Timestamp getCreationDate() {
+<span class="nc" id="L85">        return creationDate;</span>
+    }
+
+    public void setCreationDate(Timestamp creationDate) {
+<span class="nc" id="L89">        this.creationDate = creationDate;</span>
+<span class="nc" id="L90">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

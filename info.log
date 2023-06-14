@@ -1,0 +1,70 @@
+2023-06-14 16:04:35 [main] com.nnk.springboot.controllers.TradeController.home()
+INFO: Trade list page shown
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.TradeController.addTradeForm()
+INFO: Trade add page shown
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.TradeController.updateTrade()
+INFO: updated a Trade
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.TradeController.showUpdateForm()
+INFO: Trade update page shown
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.TradeController.validate()
+INFO: Added a Trade
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.TradeController.deleteTrade()
+INFO: deleted a Trade
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.RuleNameController.home()
+INFO: RuleName list page shown
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.RuleNameController.addRuleNameForm()
+INFO: RuleName add page shown
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.RuleNameController.showUpdateForm()
+INFO: RuleName update page shown
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.RuleNameController.validate()
+INFO: Added a RuleName
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.RuleNameController.updateBid()
+INFO: updated a RuleName
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.RuleNameController.deleteBid()
+INFO: deleted a RuleName
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.CurveController.addCurvePointForm()
+INFO: CurvePoint add page shown
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.CurveController.showUpdateForm()
+INFO: CurvePoint update page shown
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.CurveController.home()
+INFO: CurvePoint list page shown
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.CurveController.validate()
+INFO: Added a CurvePoint
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.CurveController.updateBid()
+INFO: updated a CurvePoint
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.CurveController.deleteBid()
+INFO: deleted a CurvePoint
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.UserController.addUser()
+INFO: User add page shown
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.UserController.showUpdateForm()
+INFO: update User page shown
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.UserController.updateUser()
+INFO: updated User
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.UserController.home()
+INFO: User list page shown
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.UserController.deleteUser()
+INFO: deleted User
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.BidListController.addBidForm()
+INFO: BidList add page shown
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.BidListController.showUpdateForm()
+INFO: Bidlist update page shown
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.BidListController.deleteBid()
+INFO: deleted a BidList
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.BidListController.home()
+INFO: BidList list page shown
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.BidListController.updateBid()
+INFO: updated a BidList
+2023-06-14 16:04:36 [main] com.nnk.springboot.controllers.BidListController.validate()
+INFO: Added a BidList
+2023-06-14 16:04:37 [main] com.nnk.springboot.controllers.RatingController.addRatingForm()
+INFO: Rating add page shown
+2023-06-14 16:04:37 [main] com.nnk.springboot.controllers.RatingController.showUpdateForm()
+INFO: Rating update page shown
+2023-06-14 16:04:37 [main] com.nnk.springboot.controllers.RatingController.deleteBid()
+INFO: deleted a Rating
+2023-06-14 16:04:37 [main] com.nnk.springboot.controllers.RatingController.updateBid()
+INFO: updated a Rating
+2023-06-14 16:04:37 [main] com.nnk.springboot.controllers.RatingController.validate()
+INFO: Added a Rating
+2023-06-14 16:04:37 [main] com.nnk.springboot.controllers.RatingController.home()
+INFO: Rating list page shown

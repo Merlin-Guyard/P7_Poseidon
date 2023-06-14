@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Home</title>
+<link rel="stylesheet" href="../../css/bootstrap.min.css" >
+</head>
+<body>
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-6 text-left">
+			<a th:if="'[ADMIN]' == ${role}" href="/user/list">User &nbsp;| </a> <a href="/bidList/list">BidList</a>&nbsp;|
+			<a href="/curvePoint/list">CurvePoint</a>&nbsp;| <a href="/rating/list">Rating</a>&nbsp;| <a
+				href="/ruleName/list">RuleName</a>&nbsp;| <a href="/trade/list">Trade</a>&nbsp;| <a
+				href="/home">Home</a>
+		</div>
+		<div class="col-6 text-right">
+			<label class="labels"><span th:text="'Current user : ' + ${name}"></span></label> <a href="#" th:href="@{/logout}">Log Out</a>
+		</div>
+	</div>
+
+	<div class="row">
+		<h2>Add New User</h2>
+	</div>
+
+	<div class="row">
+		<form action="#" th:action="@{/user/validate}" th:object="${user}" method="post" class="form-horizontal" style="width: 100%">
+			<div class="form-group">
+				<label for="fullname" class="col-sm-2 control-label">Full Name</label>
+				<div class="col-sm-10">
+					<input type="text" th:field="*{fullname}" id="fullname" placeholder="Full Name" class="col-4">
+					<p class="text-danger" th:if="${#fields.hasErrors('fullname')}" th:errors="*{fullname}"></p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="username" class="col-sm-2 control-label">User Name</label>
+				<div class="col-sm-10">
+					<input type="text" th:field="*{username}" id="username" placeholder="User Name" class="col-4">
+					<p class="text-danger" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password" class="col-sm-2 control-label">Password</label>
+				<div class="col-sm-10">
+					<input type="password" th:field="*{password}" id="password" placeholder="Password" class="col-4">
+					<p class="text-danger" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password" class="col-sm-2 control-label">Role</label>
+				<div class="col-sm-10">
+					<label class="checkbox-inline"><input type="radio" th:field="*{role}" th:value="ADMIN">Admin</label>
+					<label class="checkbox-inline"><input type="radio" th:field="*{role}" th:value="USER">User</label>
+					<p class="text-danger" th:if="${#fields.hasErrors('role')}" th:errors="*{role}"></p>
+				</div>
+			</div>
+
+
+			<div class="form-group">
+				<div class="col-sm-12">
+					<a class="btn btn-danger btn-sm" href="/user/list">Cancel</a>
+					<input class="btn btn-primary btn-sm" type="submit" value="Add user">
+				</div>
+			</div>
+
+		</form>
+	</div>
+
+</div>
+</body>
+</html>

@@ -31,7 +31,7 @@ public class SpringSecurityConfig {
         http.authorizeRequests()
                 .requestMatchers("/","/login","/css/**", "/jquery/**", "/images/**", "/home").permitAll()
                 .requestMatchers("/bidList","/curvePoint","/rating","/ruleName","/trade").hasAnyRole("USER", "ADMIN")
-                .requestMatchers("/user").permitAll()
+                .requestMatchers("/user").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and().userDetailsService(customUserDetailsService)
                 .formLogin().loginPage("/login").permitAll()

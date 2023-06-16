@@ -37,7 +37,7 @@ public class BidListService {
 
     //update a bid
     public void updateById(Integer id, BidList bidList) {
-        bidListRepository.deleteById(id);
+        bidList.setBidListId(id);
         bidListRepository.save(bidList);
     }
 

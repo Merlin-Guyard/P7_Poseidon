@@ -64,7 +64,7 @@ public class CurveController {
         Logger.info("CurvePoint update page shown");
         model.addAttribute("role", schService.getRole());
         model.addAttribute("name", schService.getName());
-        model.addAttribute("curvePoint2Update", curveService.getById(id));
+        model.addAttribute("curvePoint", curveService.getById(id));
         return "curvePoint/update";
     }
 

@@ -31,7 +31,7 @@ import org.springframework.security.web.SecurityFilterChain;
 <span class="fc" id="L31">        http.authorizeRequests()</span>
 <span class="fc" id="L32">                .requestMatchers(&quot;/&quot;,&quot;/login&quot;,&quot;/css/**&quot;, &quot;/jquery/**&quot;, &quot;/images/**&quot;, &quot;/home&quot;).permitAll()</span>
 <span class="fc" id="L33">                .requestMatchers(&quot;/bidList&quot;,&quot;/curvePoint&quot;,&quot;/rating&quot;,&quot;/ruleName&quot;,&quot;/trade&quot;).hasAnyRole(&quot;USER&quot;, &quot;ADMIN&quot;)</span>
-<span class="fc" id="L34">                .requestMatchers(&quot;/user&quot;).permitAll()</span>
+<span class="fc" id="L34">                .requestMatchers(&quot;/user&quot;).hasRole(&quot;ADMIN&quot;)</span>
 <span class="fc" id="L35">                .anyRequest().authenticated()</span>
 <span class="fc" id="L36">                .and().userDetailsService(customUserDetailsService)</span>
 <span class="fc" id="L37">                .formLogin().loginPage(&quot;/login&quot;).permitAll()</span>

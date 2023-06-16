@@ -38,7 +38,7 @@ public class TradeService {
 
     //update a trade
     public void updateById(Integer id, Trade trade) {
-        tradeRepository.deleteById(id);
+        trade.setTradeId(id);
         tradeRepository.save(trade);
     }
 

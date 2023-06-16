@@ -34,7 +34,7 @@ public class RuleNameService {
     }
 
     public void updateById(Integer id, RuleName ruleName) {
-        ruleNameRepository.deleteById(id);ruleName.setId(id);
+        ruleName.setId(id);
         ruleNameRepository.save(ruleName);
     }
 

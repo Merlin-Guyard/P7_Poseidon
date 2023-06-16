@@ -61,7 +61,7 @@ public class UserController {
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
         User user = userService.getById(id);
         user.setPassword("password");
-        model.addAttribute("user2Update", user);
+        model.addAttribute("user", user);
         model.addAttribute("role", schService.getRole());
         model.addAttribute("name", schService.getName());
 

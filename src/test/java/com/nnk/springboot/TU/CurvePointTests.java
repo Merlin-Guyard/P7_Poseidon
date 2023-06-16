@@ -55,7 +55,7 @@ public class CurvePointTests {
         List<CurvePoint> curvePointList = curveService.getAll();
 
         // Perform
-        CurvePoint curvePoint2Get = curvePointRepository.getById(curvePointList.get(0).getId());
+        CurvePoint curvePoint2Get = curvePointRepository.getById(4);
 
         //Assert
         assertEquals(curvePoint2Get.getCurveId(),11);

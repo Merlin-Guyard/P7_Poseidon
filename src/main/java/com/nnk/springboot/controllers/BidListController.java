@@ -62,7 +62,7 @@ public class BidListController {
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
 
         Logger.info("Bidlist update page shown");
-        model.addAttribute("bidList2Update", bidListService.getById(id));
+        model.addAttribute("bidList", bidListService.getById(id));
         model.addAttribute("role", schService.getRole());
         model.addAttribute("name", schService.getName());
         return "bidList/update";
@@ -73,6 +73,8 @@ public class BidListController {
     public String updateBid(@PathVariable("id") Integer id, @Valid BidList bidList, BindingResult result, Model model) {
 
         if(result.hasErrors()){
+            model.addAttribute("role", schService.getRole());
+            model.addAttribute("name", schService.getName());
             return "/bidList/update";
         }
 

@@ -63,7 +63,7 @@ public class RuleNameController {
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
 
         Logger.info("RuleName update page shown");
-        model.addAttribute("ruleName2Update", ruleNameService.getById(id));
+        model.addAttribute("ruleName", ruleNameService.getById(id));
         model.addAttribute("role", schService.getRole());
         model.addAttribute("name", schService.getName());
         return "ruleName/update";

@@ -63,7 +63,7 @@ public class RatingController {
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
 
         Logger.info("Rating update page shown");
-        model.addAttribute("rating2Update", ratingService.getById(id));
+        model.addAttribute("rating", ratingService.getById(id));
         model.addAttribute("role", schService.getRole());
         model.addAttribute("name", schService.getName());
         return "rating/update";

@@ -37,7 +37,7 @@ public class CurveService {
 
     //update a Curve Point
     public void updateById(Integer id, CurvePoint curvePoint) {
-        curvePointRepository.deleteById(id);
+        curvePoint.setId(id);
         curvePointRepository.save(curvePoint);
     }
 

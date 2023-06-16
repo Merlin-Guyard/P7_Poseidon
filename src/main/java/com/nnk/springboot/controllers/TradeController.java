@@ -63,7 +63,7 @@ public class TradeController {
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
 
         Logger.info("Trade update page shown");
-        model.addAttribute("trade2Update", tradeService.getById(id));
+        model.addAttribute("trade", tradeService.getById(id));
         model.addAttribute("role", schService.getRole());
         model.addAttribute("name", schService.getName());
         return "trade/update";
